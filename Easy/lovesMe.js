@@ -14,8 +14,34 @@ Remember to return a string.
 The first phrase is always "Loves me".
 */
 
-function lovesMe( /*args*/ ) {
-  //your code
+function lovesMe(num) {
+  let text = "";
+  if (num === 1) {
+    return "LOVES ME"
+  }
+  for (let i = 0; i < (num); i++) {
+    if (i % 2 === 0) {
+      if (i == num - 1) {
+        text = text + "LOVES ME"
+      }
+      else {
+        text = text + "Loves me,"
+      }
+
+    }
+    else {
+      if (i == num - 1) {
+        text = text + " LOVES ME NOT"
+      }
+      else { text = text + " Loves me not, " }
+
+    }
+
+  }
+  return text;
+
+
+
 }
 
 exports.solution = lovesMe;
